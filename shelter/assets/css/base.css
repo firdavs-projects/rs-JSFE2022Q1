@@ -1,0 +1,219 @@
+/* Main styles */
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 15px 45px;
+    border-radius: 100px;
+    color: #292929;
+    background: #F1CDB3;
+    display: inline-block;
+    border: 2px solid #F1CDB3;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+}
+
+.button:hover {
+    background: #FDDCC4 !important;
+    color: #292929;
+    border: 2px solid #FDDCC4 !important;
+    cursor: pointer;
+}
+
+.outlined {
+    border: 2px solid #F1CDB3;
+    background: transparent;
+}
+
+.slider__control::before {
+    background-image: none !important;
+}
+
+.arrow {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: url(../icons/arrow.svg) no-repeat center center;
+    background-size: 14px 6px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #F1CDB3;
+}
+
+.arrow:hover {
+    background: url(../icons/arrow.svg) no-repeat center center #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.arrow:focus {
+    background: url(../icons/arrow.svg) no-repeat center center #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.arrow.left:focus {
+    background: url(../icons/arrow-left.svg) no-repeat center center #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.arrow.left {
+    background: url(../icons/arrow-left.svg) no-repeat center center;
+}
+
+.arrow.left:hover {
+    background: url(../icons/arrow-left.svg) no-repeat center center #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 41, 41, 0.6);
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal__close {
+    position: absolute;
+    top: calc(50% - 305px);
+    right: calc(50% - 490px);
+    width: 52px;
+    height: 52px;
+    background: url(../icons/close.svg) no-repeat center center;
+    cursor: pointer;
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+.modal__close:hover {
+    background: url(../icons/close.svg) no-repeat center center #FDDCC4;
+    border: 2px solid #FDDCC4;
+}
+
+.modal__inner {
+    border-radius: 9px;
+    background: #FAFAFA;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 900px;
+    max-height: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.modal__img {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    border-radius: 9px 0 0 9px;
+    margin-right: 29px;
+}
+
+.modal__title h2 {
+    margin-top: 50px;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.modal__type span {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.modal__info p {
+    margin-top: 40px;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.modal__attributes{
+
+}
+
+.modal__attribute{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: 14px;
+}
+
+.modal__attribute-title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+    padding-right: 7px;
+}
+
+.modal__attribute-title::after {
+    content: ':';
+}
+.modal__attribute-title::before {
+    content: '';
+    background: #F1CDB3;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    left: -14px;
+    top: calc(50% - 2px);
+}
+
+.modal__attribute-value {
+    margin: 0;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
