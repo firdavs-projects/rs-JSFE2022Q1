@@ -155,6 +155,16 @@
     cursor: pointer;
 }
 
+.our-friends__item img{
+    width: 270px;
+    height: 270px;
+}
+
+.our-friends__item:hover{
+    background: #FFFFFF;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
 .our-friends__item:hover .button {
     background: #FDDCC4 !important;
     color: #292929;

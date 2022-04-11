@@ -26,6 +26,7 @@ const petInfo = [
     }
 ]
 const slideButtons = document.querySelectorAll('.slide-btn');
+const closeBtn = document.querySelector('.modal__close');
 const modal = document.querySelector('#modal');
 const modalImg = modal.querySelector('#modal__img');
 const modalTitle = modal.querySelector('#modal__title');
@@ -43,7 +44,7 @@ const closeModal = () => {
     modalAttributes.innerHTML = '';
 }
 
-modal.addEventListener('click', closeModal);
+closeBtn.addEventListener('click', closeModal);
 
 slideButtons.forEach(button => {
     button.addEventListener('click', () => {
