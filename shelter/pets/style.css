@@ -3,6 +3,11 @@
 .not-only {
     color: #545454;
     background: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
 }
 
 .not-only .container {
@@ -35,6 +40,7 @@
 /* Our Friends page */
 
 .our-friends {
+    margin-top: 120px;
     background: #F6F6F6;
 }
 
