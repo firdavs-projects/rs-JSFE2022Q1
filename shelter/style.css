@@ -8,7 +8,7 @@
 }
 
 .not-only .container {
-    height: 850px;
+    height: 848px;
     padding-top: 60px;
 }
 
@@ -45,11 +45,12 @@
     flex-flow: column;
     justify-content: center;
     width: 35rem;
+    margin-bottom: 81px;
 }
 
 .info__image {
     background: url(./assets/images/about-image.png) no-repeat left top;
-    width: 55%;
+    width: 65%;
     height: 100%;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .info__text {
-    padding-top: 42px;
+    padding-top: 41px;
     font-family: 'Arial', serif;
     font-style: normal;
     font-weight: 400;
@@ -73,7 +74,7 @@
 
 .info__button {
     display: inline-block;
-    margin-top: 42px;
+    margin-top: 41px;
 }
 
 /* About section */
@@ -86,7 +87,7 @@
 }
 
 .about__image {
-    background: url(./assets/images/pets.png) no-repeat center center;
+    background: url(./assets/images/pets.png) no-repeat 174px center;
     width: 100%;
     height: 408px;
     flex: 1;
@@ -94,6 +95,7 @@
 
 .about__info {
     flex: 1;
+    margin-left: -11px;
 }
 
 .about__title {
@@ -139,7 +141,7 @@
 .our-friends__button {
     display: flex;
     justify-content: center;
-    padding-bottom: 115px;
+    padding-bottom: 96px;
 }
 
 .our-friends__item {
@@ -180,13 +182,13 @@
 }
 
 .slider {
-    padding: 80px 0;
+    padding: 59px 0;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .slider__wrapper {
-    margin: 0 105px;
+    margin: 0 60px;
     overflow: hidden;
 }
 
@@ -206,7 +208,7 @@
 /* Help section */
 
 .help {
-    padding-top: 80px;
+    padding-top: 83px;
 }
 
 .help__title {
@@ -215,12 +217,12 @@
     text-align: center;
     letter-spacing: 0.06em;
     color: #545454;
-    max-width: 308px;
+    max-width: 310px;
     margin: 0 auto;
 }
 
 .help__info {
-    margin-top: 60px;
+    margin-top: 57px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -263,12 +265,13 @@
     background: url("./assets/images/donate.png") no-repeat center right;
     width: 505px;
     height: 261px;
-    flex: 1.12;
+    flex: 1.11;
+    margin-right: 13px;
 }
 
 .addition__info {
-    margin-left: 30px;
-    flex: 0.88;
+    flex: 0.89;
+    margin-left: 13px;
 }
 
 .addition__info-title {

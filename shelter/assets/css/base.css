@@ -24,7 +24,7 @@ a {
 }
 
 .button {
-    padding: 15px 45px;
+    padding: 14px 43px;
     border-radius: 100px;
     color: #292929;
     background: #F1CDB3;
@@ -240,7 +240,8 @@ a {
 }
 
 .navbar__subtitle {
-    margin-top: 10px;
+    margin-top: 9px;
+    margin-left: 4px;
     font-family: 'Arial', serif;
     font-style: normal;
     font-weight: 400;
@@ -265,7 +266,7 @@ a {
     font-weight: 400;
     font-size: 15px;
     line-height: 160%;
-    margin-left: 35px;
+    margin-left: 36px;
 }
 
 .navbar__link:hover {
@@ -302,7 +303,7 @@ a {
 }
 
 .contacts__item-text {
-    margin-top: 40px;
+    margin-top: 32px;
     display: flex;
     align-items: center;
     max-width: 302px;
@@ -325,5 +326,6 @@ a {
     background: url("../images/footer.png") no-repeat bottom right;
     height: 310px;
     width: 310px;
+    margin-bottom: 18px;
 }
 
