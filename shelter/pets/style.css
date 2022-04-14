@@ -62,7 +62,7 @@
     align-items: center;
     background: #FAFAFA;
     border-radius: 9px;
-    padding-bottom: 30px;
+    padding-bottom: 28px;
     margin: 0 auto 30px;
     max-width: 270px;
     cursor: pointer;
@@ -93,7 +93,7 @@
 }
 
 .slider {
-    padding: 80px 0 150px;
+    padding: 58px 0 183px;
     max-width: 1240px;
     margin: 0 auto;
 }
@@ -125,7 +125,7 @@
 
 .current-page {
     position: absolute;
-    bottom: 75px;
+    bottom: 102px;
     left: calc(50% - 26px);
     height: 52px;
     width: 52px;
@@ -151,7 +151,7 @@
 }
 
 .slider__control.arrow {
-    top: calc(100% - 100px);
+    top: calc(100% - 126px);
     right: calc(50% - 98px);
     background: url("../assets/icons/next.svg") no-repeat center;
 }
@@ -184,7 +184,7 @@
 }
 
 .slider__control.arrow.left.prev-page {
-    left: calc(50% - 168px);
+    left: calc(50% - 170px);
     background: url("../assets/icons/nextPage.svg") no-repeat center;
 }
 
