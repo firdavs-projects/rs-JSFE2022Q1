@@ -10,25 +10,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="../assets/modules/chief-slider.min.css">
+<!--    <link rel="stylesheet" href="../assets/modules/chief-slider.min.css">-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="../assets/css/base.css">
 </head>
 <body>
+
 <header class="not-only">
-    <div class="container">
-        <nav class="not-only__navbar">
+    <div class="container pets">
+        <nav class="not-only__navbar pets">
             <div class="navbar__logo">
-                <h1 class="navbar__title"><a href="../">Cozy House</a></h1>
+                <h1 class="navbar__title pets"><a href="../">Cozy House</a></h1>
                 <h5 class="navbar__subtitle">Shelter for pets in Boston</h5>
             </div>
-            <ul class="navbar__links">
+            <ul class="navbar__links pets">
                 <li class="navbar__link"><a href="../index.html#about">About the shelter</a></li>
                 <li class="navbar__link active"><a href="./">Our pets</a></li>
                 <li class="navbar__link"><a href="../index.html#help">Help the shelter</a></li>
                 <li class="navbar__link"><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
+        <button class="burger-menu pets"></button>
+        <div class="navbar__menu">
+            <div class="navbar__logo">
+                <h2 class="navbar__title"><a href="./">Cozy House</a></h2>
+                <h5 class="navbar__subtitle">Shelter for pets in Boston</h5>
+            </div>
+            <ul class="navbar__list">
+                <li class="navbar__link active"><a href="#about">About the shelter</a></li>
+                <li class="navbar__link"><a href="./pets">Our pets</a></li>
+                <li class="navbar__link"><a href="#help">Help the shelter</a></li>
+                <li class="navbar__link"><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
     </div>
 </header>
 
@@ -36,7 +50,7 @@
     <div class="our-friends__title">
         Our friends who <br/> are looking for a house
     </div>
-    <div class="slider">
+    <div class="slider pets">
         <div class="slider__wrapper">
             <div class="slider__items">
                 <div class="slider__item">
@@ -47,13 +61,6 @@
                         </div>
                         <button data-slide="Katrine" class="button outlined slide-btn">Learn more</button>
                     </div>
-                    <div class="our-friends__item">
-                        <img src="../assets/images/tim.png" alt="Timmy">
-                        <div class="our-friends__item-title">
-                            Timmy
-                        </div>
-                        <button data-slide="Timmy" class="button outlined slide-btn">Learn more</button>
-                    </div>
                 </div>
                 <div class="slider__item">
                     <div class="our-friends__item">
@@ -62,13 +69,6 @@
                             Jennifer
                         </div>
                         <button data-slide="Jennifer" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                    <div class="our-friends__item">
-                        <img src="../assets/images/charly.png" alt="Charly">
-                        <div class="our-friends__item-title">
-                            Charly
-                        </div>
-                        <button data-slide="Charly" class="button outlined slide-btn">Learn more</button>
                     </div>
                 </div>
                 <div class="slider__item">
@@ -79,15 +79,8 @@
                         </div>
                         <button data-slide="Woody" class="button outlined slide-btn">Learn more</button>
                     </div>
-                    <div class="our-friends__item">
-                        <img src="../assets/images/scar.png" alt="Scarlett">
-                        <div class="our-friends__item-title">
-                            Scarlett
-                        </div>
-                        <button data-slide="Scarlett" class="button outlined slide-btn">Learn more</button>
-                    </div>
                 </div>
-                <div class="slider__item">
+                <div class="slider__item mobile-hide">
                     <div class="our-friends__item">
                         <img src="../assets/images/sop.png" alt="Sophia">
                         <div class="our-friends__item-title">
@@ -95,22 +88,8 @@
                         </div>
                         <button data-slide="Sophia" class="button outlined slide-btn">Learn more</button>
                     </div>
-                    <div class="our-friends__item">
-                        <img src="../assets/images/fred.png" alt="Freddie">
-                        <div class="our-friends__item-title">
-                            Freddie
-                        </div>
-                        <button data-slide="Freddie" class="button outlined slide-btn">Learn more</button>
-                    </div>
                 </div>
-                <div class="slider__item">
-                    <div class="our-friends__item">
-                        <img src="../assets/images/kat.png" alt="Katrine">
-                        <div class="our-friends__item-title">
-                            Katrine
-                        </div>
-                        <button data-slide="Katrine" class="button outlined slide-btn">Learn more</button>
-                    </div>
+                <div class="slider__item mobile-hide">
                     <div class="our-friends__item">
                         <img src="../assets/images/tim.png" alt="Timmy">
                         <div class="our-friends__item-title">
@@ -119,14 +98,7 @@
                         <button data-slide="Timmy" class="button outlined slide-btn">Learn more</button>
                     </div>
                 </div>
-                <div class="slider__item">
-                    <div class="our-friends__item">
-                        <img src="../assets/images/jen.png" alt="Jennifer">
-                        <div class="our-friends__item-title">
-                            Jennifer
-                        </div>
-                        <button data-slide="Jennifer" class="button outlined slide-btn">Learn more</button>
-                    </div>
+                <div class="slider__item mobile-hide">
                     <div class="our-friends__item">
                         <img src="../assets/images/charly.png" alt="Charly">
                         <div class="our-friends__item-title">
@@ -135,45 +107,33 @@
                         <button data-slide="Charly" class="button outlined slide-btn">Learn more</button>
                     </div>
                 </div>
-                <div class="slider__item">
+                <div class="slider__item table-hide">
                     <div class="our-friends__item">
-                        <img src="../assets/images/woo.png" alt="Woody">
+                        <img src="../assets/images/tim.png" alt="Timmy">
                         <div class="our-friends__item-title">
-                            Woody
+                            Timmy
                         </div>
-                        <button data-slide="Woody" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                    <div class="our-friends__item">
-                        <img src="../assets/images/scar.png" alt="Scarlett">
-                        <div class="our-friends__item-title">
-                            Scarlett
-                        </div>
-                        <button data-slide="Scarlett" class="button outlined slide-btn">Learn more</button>
+                        <button data-slide="Timmy" class="button outlined slide-btn">Learn more</button>
                     </div>
                 </div>
-                <div class="slider__item">
+                <div class="slider__item table-hide">
                     <div class="our-friends__item">
-                        <img src="../assets/images/sop.png" alt="Sophia">
+                        <img src="../assets/images/charly.png" alt="Charly">
                         <div class="our-friends__item-title">
-                            Sophia
+                            Charly
                         </div>
-                        <button data-slide="Sophia" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                    <div class="our-friends__item">
-                        <img src="../assets/images/fred.png" alt="Freddie">
-                        <div class="our-friends__item-title">
-                            Freddie
-                        </div>
-                        <button data-slide="Freddie" class="button outlined slide-btn">Learn more</button>
+                        <button data-slide="Charly" class="button outlined slide-btn">Learn more</button>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="#" class="slider__control arrow left prev-page disabled" data-slide="prev"></a>
-        <a href="#" class="slider__control arrow left prev-slide disabled" data-slide="prev"></a>
-        <button class="current-page" data-slide-to="0"></button>
-        <a href="#" class="slider__control arrow right next-slide" data-slide="next"></a>
-        <a href="#" class="slider__control arrow next-page" data-slide="next"></a>
+        <div class="controls-container">
+            <button class="slider__control arrow left prev-page disabled" data-slide="prev"></button>
+            <button class="slider__control arrow left prev-slide disabled" data-slide="prev"></button>
+            <button class="current-page" data-slide-to="0">1</button>
+            <button class="slider__control arrow right next-slide" data-slide="next"></button>
+            <button class="slider__control arrow next-page" data-slide="next"></button>
+        </div>
     </div>
 </section>
 
@@ -202,11 +162,11 @@
             <div class="contacts__item-title">
                 For questions and suggestions
             </div>
-            <div class="contacts__item-text">
+            <div class="contacts__item-text mt39">
                 <img src="../assets/icons/mail.svg" alt="email">
                 <a href="mailto:email@shelter.com">email@shelter.com</a>
             </div>
-            <div class="contacts__item-text">
+            <div class="contacts__item-text mt39">
                 <img src="../assets/icons/tel.svg" alt="tel">
                 <a href="tel:+13 674 567 75 54">+13 674 567 75 54</a>
             </div>
@@ -217,7 +177,7 @@
             </div>
             <div class="contacts__item-text">
                 <img src="../assets/icons/map.svg" alt="map">
-                <a target="_blank" href="https://goo.gl/maps/QRiktuYzpRXrcbV2A">1 Central Street, Boston (entrance from
+                <a target="_blank" href="https://goo.gl/maps/QRiktuYzpRXrcbV2A">1 Central Street, Boston <br> (entrance from
                     the store)</a>
             </div>
             <div class="contacts__item-text">
@@ -231,7 +191,7 @@
     </div>
 </footer>
 
-<script defer src="../assets/modules/chief-slider.min.js"></script>
+<!--<script defer src="../assets/modules/chief-slider.min.js"></script>-->
 <script src="../assets/js/base.js"></script>
 <script src="./script.js"></script>
 </body>

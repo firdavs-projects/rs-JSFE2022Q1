@@ -9,6 +9,12 @@ navbarLinks.forEach(link => {
     });
 });
 
+const navbarToggle = document.querySelector('.burger-menu');
+navbarToggle.addEventListener('click', () => {
+    navbarToggle.classList.toggle('active');
+    document.querySelector('.navbar__menu').classList.toggle('active');
+});
+
 // Modal
 
 const petInfo = [
@@ -47,29 +53,29 @@ const closeModal = () => {
 closeBtn.addEventListener('click', closeModal);
 
 slideButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const current = petInfo.find(pet => pet.name === button.dataset.slide) || petInfo[0];
-        const isPetsPage = modal.dataset.page === 'pets';
-        current.attributes.forEach(attribute => {
-            const dlEl = document.createElement('dl');
-            const dtEl = document.createElement('dt');
-            const ddEl = document.createElement('dd');
-            dlEl.classList.add('modal__attribute');
-            dtEl.classList.add('modal__attribute-title');
-            ddEl.classList.add('modal__attribute-value');
-            dtEl.innerHTML = attribute[0];
-            ddEl.innerHTML = attribute[1];
-            dlEl.appendChild(dtEl);
-            dlEl.appendChild(ddEl);
-            modalAttributes.appendChild(dlEl);
-        });
-        modal.classList.add('active');
-        modalImg.src = isPetsPage ? '.' + current.img : current.img;
-        modalImg.alt = current.name
-        modalTitle.innerHTML = current.name;
-        modalType.innerHTML = current.type;
-        modalInfo.innerHTML = current.info;
-    })
+    // button.addEventListener('click', () => {
+    //     const current = petInfo.find(pet => pet.name === button.dataset.slide) || petInfo[0];
+    //     const isPetsPage = modal.dataset.page === 'pets';
+    //     current.attributes.forEach(attribute => {
+    //         const dlEl = document.createElement('dl');
+    //         const dtEl = document.createElement('dt');
+    //         const ddEl = document.createElement('dd');
+    //         dlEl.classList.add('modal__attribute');
+    //         dtEl.classList.add('modal__attribute-title');
+    //         ddEl.classList.add('modal__attribute-value');
+    //         dtEl.innerHTML = attribute[0];
+    //         ddEl.innerHTML = attribute[1];
+    //         dlEl.appendChild(dtEl);
+    //         dlEl.appendChild(ddEl);
+    //         modalAttributes.appendChild(dlEl);
+    //     });
+    //     modal.classList.add('active');
+    //     modalImg.src = isPetsPage ? '.' + current.img : current.img;
+    //     modalImg.alt = current.name
+    //     modalTitle.innerHTML = current.name;
+    //     modalType.innerHTML = current.type;
+    //     modalInfo.innerHTML = current.info;
+    // })
 });
 
 

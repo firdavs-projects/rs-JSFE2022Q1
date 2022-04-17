@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="./assets/modules/chief-slider.min.css">
+<!--    <link rel="stylesheet" href="./assets/modules/chief-slider.min.css">-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./assets/css/base.css">
 </head>
@@ -29,6 +29,19 @@
                 <li class="navbar__link"><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
+        <button class="burger-menu"></button>
+        <div class="navbar__menu">
+            <div class="navbar__logo">
+                <h2 class="navbar__title"><a href="./">Cozy House</a></h2>
+                <h5 class="navbar__subtitle">Shelter for pets in Boston</h5>
+            </div>
+            <ul class="navbar__list">
+                <li class="navbar__link active"><a href="#about">About the shelter</a></li>
+                <li class="navbar__link"><a href="./pets">Our pets</a></li>
+                <li class="navbar__link"><a href="#help">Help the shelter</a></li>
+                <li class="navbar__link"><a href="#contacts">Contacts</a></li>
+            </ul>
+        </div>
         <div class="not-only__info">
             <div class="info__description">
                 <div class="info__title">
@@ -85,7 +98,7 @@
                         <button data-slide="Katrine" class="button outlined slide-btn">Learn more</button>
                     </div>
                 </div>
-                <div class="slider__item">
+                <div class="slider__item mobile-none">
                     <div class="our-friends__item">
                         <img src="./assets/images/jen.png" alt="Jennifer">
                         <div class="our-friends__item-title">
@@ -94,7 +107,7 @@
                         <button data-slide="Jennifer" class="button outlined slide-btn">Learn more</button>
                     </div>
                 </div>
-                <div class="slider__item">
+                <div class="slider__item mobile-none">
                     <div class="our-friends__item">
                         <img src="./assets/images/woo.png" alt="Woody">
                         <div class="our-friends__item-title">
@@ -103,55 +116,12 @@
                         <button data-slide="Woody" class="button outlined slide-btn">Learn more</button>
                     </div>
                 </div>
-                <div class="slider__item">
-                    <div class="our-friends__item">
-                        <img src="./assets/images/sop.png" alt="Sophia">
-                        <div class="our-friends__item-title">
-                            Sophia
-                        </div>
-                        <button data-slide="Sophia" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <div class="our-friends__item">
-                        <img src="./assets/images/tim.png" alt="Timmy">
-                        <div class="our-friends__item-title">
-                            Timmy
-                        </div>
-                        <button data-slide="Timmy" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <div class="our-friends__item">
-                        <img src="./assets/images/charly.png" alt="Charly">
-                        <div class="our-friends__item-title">
-                            Charly
-                        </div>
-                        <button data-slide="Charly" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <div class="our-friends__item">
-                        <img src="./assets/images/scar.png" alt="Scarlett">
-                        <div class="our-friends__item-title">
-                            Scarlett
-                        </div>
-                        <button data-slide="Scarlett" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <div class="our-friends__item">
-                        <img src="./assets/images/fred.png" alt="Freddie">
-                        <div class="our-friends__item-title">
-                            Freddie
-                        </div>
-                        <button data-slide="Freddie" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                </div>
             </div>
         </div>
-        <a href="#" class="slider__control arrow left" data-slide="prev"></a>
-        <a href="#" class="slider__control arrow" data-slide="next"></a>
+        <div class="buttons-container">
+            <button class="slider__control arrow left" data-slide="prev"></button>
+            <button class="slider__control arrow" data-slide="next"></button>
+        </div>
     </div>
     <div class="our-friends__button">
         <a href="./pets">
@@ -160,24 +130,24 @@
     </div>
 </section>
 
-<section id="modal" class="modal">
-    <button class="modal__close"></button>
-    <div class="modal__inner container">
-        <img class="modal__img" id="modal__img" src="#" alt="">
-        <div class="modal__text">
-            <div class="modal__title">
-                <h2 id="modal__title"></h2>
-            </div>
-            <div class="modal__type">
-                <span id="modal__type"></span>
-            </div>
-            <div class="modal__info">
-                <p id="modal__info"></p>
-            </div>
-            <div class="modal__attributes" id="modal__attributes"></div>
-        </div>
-    </div>
-</section>
+<!--<section id="modal" class="modal">-->
+<!--    <button class="modal__close"></button>-->
+<!--    <div class="modal__inner container">-->
+<!--        <img class="modal__img" id="modal__img" src="#" alt="">-->
+<!--        <div class="modal__text">-->
+<!--            <div class="modal__title">-->
+<!--                <h2 id="modal__title"></h2>-->
+<!--            </div>-->
+<!--            <div class="modal__type">-->
+<!--                <span id="modal__type"></span>-->
+<!--            </div>-->
+<!--            <div class="modal__info">-->
+<!--                <p id="modal__info"></p>-->
+<!--            </div>-->
+<!--            <div class="modal__attributes" id="modal__attributes"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 <section id="help" class="help container">
     <div class="help__title">
@@ -233,7 +203,7 @@
             </div>
         </div>
         <div class="help__item">
-            <img src="./assets/icons/collar.svg" alt="Sleeping areas">
+            <img src="./assets/icons/home.svg" alt="Sleeping areas">
             <div class="help__item-title">
                 Sleeping areas
             </div>
@@ -272,11 +242,11 @@
             <div class="contacts__item-title">
                 For questions and suggestions
             </div>
-            <div class="contacts__item-text">
+            <div class="contacts__item-text mt39">
                 <img src="./assets/icons/mail.svg" alt="email">
                 <a href="mailto:email@shelter.com">email@shelter.com</a>
             </div>
-            <div class="contacts__item-text">
+            <div class="contacts__item-text mt39">
                 <img src="./assets/icons/tel.svg" alt="tel">
                 <a href="tel:+13 674 567 75 54">+13 674 567 75 54</a>
             </div>
@@ -287,7 +257,7 @@
             </div>
             <div class="contacts__item-text">
                 <img src="./assets/icons/map.svg" alt="map">
-                <a target="_blank" href="https://goo.gl/maps/QRiktuYzpRXrcbV2A">1 Central Street, Boston (entrance from
+                <a target="_blank" href="https://goo.gl/maps/QRiktuYzpRXrcbV2A">1 Central Street, Boston <br> (entrance from
                     the store)</a>
             </div>
             <div class="contacts__item-text">
@@ -301,7 +271,7 @@
     </div>
 </footer>
 
-<script defer src="./assets/modules/chief-slider.min.js"></script>
+<!--<script defer src="./assets/modules/chief-slider.min.js"></script>-->
 <script src="./script.js"></script>
 <script src="assets/js/base.js"></script>
 </body>
