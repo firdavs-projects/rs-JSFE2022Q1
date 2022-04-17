@@ -404,7 +404,7 @@ a {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar__links{
         display: none;
     }
