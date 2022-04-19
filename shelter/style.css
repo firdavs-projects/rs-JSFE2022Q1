@@ -336,7 +336,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 1280px) and (min-width: 768px) {
+@media (max-width: 1279px) and (min-width: 768px) {
     .not-only .container {
         height: 1134px;
         padding-top: 30px;
