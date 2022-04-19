@@ -669,7 +669,7 @@
     }
 
     .addition__info-text {
-        margin: 21px 23px 0;
+        margin: 21px auto 0;
         /*padding: 0 24px 0 20px;*/
         font-family: 'Georgia';
         font-style: normal;
@@ -681,6 +681,7 @@
         display: flex;
         align-items: center;
         letter-spacing: normal;
+        max-width: 274px;
     }
 
     .addition__info-card{
@@ -696,5 +697,8 @@
     .addition__info-data{
         padding: 0 20px;
         text-align: justify;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
