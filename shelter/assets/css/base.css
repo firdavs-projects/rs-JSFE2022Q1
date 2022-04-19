@@ -531,10 +531,14 @@ a {
         align-items: center;
     }
 
+    .contacts__img{
+        width: 100%;
+    }
+
     .footer__img {
         background: url(../images/footer.png) no-repeat bottom center;
         background-size: 260px;
         height: 269px;
-        /*width: 100%;*/
+        margin: 0 auto;
     }
 }
