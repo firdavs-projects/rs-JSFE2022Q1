@@ -10,7 +10,7 @@ const modalTitle = modal.querySelector('#modal__title');
 const modalType = modal.querySelector('#modal__type');
 const modalInfo = modal.querySelector('#modal__info');
 const modalAttributes = modal.querySelector('#modal__attributes');
-const modalInner = modal.querySelector('.modal__inner');
+
 // slider
 const sliderItems = document.querySelector('.slider__items');
 const prevBtn = document.getElementById('prev');
@@ -27,13 +27,14 @@ const toggleNavbar = () => {
     navbarToggle.classList.toggle('active');
     navbarMenu.classList.toggle('active');
     navbarBackground.classList.toggle('active');
+    document.body.classList.toggle('overflow-hidden');
 };
 
 navbarLinks.forEach(link => {
     link.addEventListener('click', () => {
         navbarLinks.forEach(link => link.classList.remove('active'));
         link.classList.add('active');
-        toggleNavbar();
+        window.innerWidth < 768 && toggleNavbar();
     });
 });
 navbarToggle.addEventListener('click', toggleNavbar);
@@ -49,7 +50,7 @@ const closeModal = () => {
     modalType.innerHTML = '';
     modalInfo.innerHTML = '';
     modalAttributes.innerHTML = '';
-    document.body.style.overflow = 'auto';
+    document.body.classList.remove('overflow-hidden');
 }
 
 const createAttribute = (key, value) => {
@@ -78,13 +79,20 @@ const openModal = (slide) => {
     modalTitle.innerHTML = current.name;
     modalType.innerHTML = current.type + ' - ' + current.breed;
     modalInfo.innerHTML = current.description;
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('overflow-hidden');
 }
 
 closeBtn.addEventListener('click', closeModal);
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         closeModal();
+    }
+});
+modal.addEventListener('mouseover', (e) => {
+    if (e.target === modal) {
+        closeBtn.classList.add('hover');
+    } else {
+        closeBtn.classList.remove('hover');
     }
 });
 
