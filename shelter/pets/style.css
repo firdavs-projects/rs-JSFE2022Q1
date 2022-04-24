@@ -105,7 +105,8 @@
 .slider__items {
     counter-reset: slide;
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
+    transition: all 0.5s ease-in-out;
 }
 
 .slider__item {
@@ -237,7 +238,7 @@
 
     .slider__items {
         display: flex;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
     }
 
     .slider__item {
