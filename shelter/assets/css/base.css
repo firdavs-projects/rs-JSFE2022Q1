@@ -108,8 +108,8 @@ a {
 
 .modal__close {
     position: absolute;
-    top: calc(50% - 305px);
-    right: calc(50% - 500px);
+    top: -52px;
+    right: -43px;
     width: 52px;
     height: 52px;
     background: url(../icons/close.svg) no-repeat center center;
@@ -117,6 +117,7 @@ a {
     border: 2px solid #F1CDB3;
     box-sizing: border-box;
     border-radius: 100px;
+    z-index: 10;
 }
 
 .modal__close:hover {
@@ -124,11 +125,17 @@ a {
     border: 2px solid #FDDCC4;
 }
 
+.modal__close:focus {
+    background: url(../icons/close.svg) no-repeat center center #FDDCC4;
+    border: 2px solid #FDDCC4 !important;
+    box-shadow: none !important;
+}
+
 .modal__inner {
+    position: relative;
     border-radius: 9px;
     background: #FAFAFA;
     box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
-    position: relative;
     top: 50%;
     transform: translateY(-50%);
     width: 900px;
@@ -146,6 +153,11 @@ a {
     width: 500px;
     border-radius: 9px 0 0 9px;
     margin-right: 29px;
+}
+
+.modal__text {
+    width: 371px;
+    max-width: available;
 }
 
 .modal__title h2 {
@@ -278,6 +290,21 @@ a {
     border-bottom: 3px solid #F1CDB3;
 }
 
+.navbar-background {
+    display: none;
+}
+
+.navbar-background.active {
+    display: block;
+    background: rgba(41, 41, 41, 0.6);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 /* Contacts section */
 
 .contacts {
@@ -329,14 +356,57 @@ a {
     width: 310px;
 }
 
-.navbar__menu, .burger-menu{
+.navbar__menu, .burger-menu {
     display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
+    .modal__inner {
+        width: 612px;
+        min-height: 350px;
+    }
+
+    .modal__img {
+        width: 350px;
+        height: 350px;
+        margin: auto 11px auto 0;
+    }
+
+    .modal__close {
+        /*top: calc(50% - 227px);*/
+        /*right: calc(50% - 358px);*/
+    }
+
+    .modal__title h2 {
+        margin-top: 10px;
+    }
+
+    .modal__type {
+        margin-top: 10px;
+    }
+
+    .modal__info p {
+        margin-top: 19px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        padding-bottom: 5px;
+    }
+
+    .modal__attributes {
+        margin-bottom: 10px;
+    }
+
+    .modal__attribute {
+        margin-top: 7px;
+        margin-bottom: 0;
+    }
+
     .arrow {
         right: 31px !important;
     }
+
     .arrow.left {
         left: 30px;
     }
@@ -362,12 +432,11 @@ a {
         margin-left: -7px;
     }
 
-    .mt39{
+    .mt39 {
         margin-top: 39px;
     }
 
-/*    nav*/
-
+    /*    nav*/
     .not-only__navbar.pets {
         padding: 0 30px;
     }
@@ -385,8 +454,7 @@ a {
         margin: 18px 0 16px;
     }
 
-/*    slider*/
-
+    /*    slider*/
     .slider__item {
         flex: 0 0 50%;
         max-width: 50%;
@@ -405,7 +473,62 @@ a {
 }
 
 @media (max-width: 767px) {
-    .navbar__links{
+
+    .modal__inner {
+        width: 220px;
+        min-height: 320px;
+        padding: 10px;
+    }
+
+    .modal__img {
+        display: none;
+    }
+
+    .modal__close {
+        top: -55px;
+        right: -30px;
+    }
+
+    .modal__title h2 {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 9px;
+    }
+
+    .modal__type{
+        margin-top: 0;
+        text-align: center;
+    }
+    .modal__type span{
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .modal__info{
+        margin-top: 20px;
+    }
+
+    .modal__info p{
+        margin: 0;
+        padding-bottom: 0;
+        text-align: justify;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 110%;
+        text-align: justify;
+        letter-spacing: 0.06em;
+    }
+
+    .modal__attributes{
+        margin-top: 22px;
+    }
+
+    .modal__attribute{
+        margin-top: 6px;
+        margin-bottom: 3px;
+    }
+
+    .navbar__links {
         display: none;
     }
 
@@ -418,7 +541,7 @@ a {
         margin: 0 10px;
     }
 
-    .navbar__menu{
+    .navbar__menu {
         display: block;
         z-index: 10;
         justify-content: center;
@@ -433,22 +556,23 @@ a {
         transform: translateX(320px);
     }
 
-    .navbar__menu .navbar__logo .navbar__subtitle{
+    .navbar__menu .navbar__logo .navbar__subtitle {
         color: #FFFFFF;
     }
+
     .navbar__menu .navbar__logo .navbar__title {
         color: #F1CDB3;
     }
 
-    .navbar__menu .navbar__logo{
+    .navbar__menu .navbar__logo {
         padding: 31px 10px;
     }
 
-    .navbar__menu.active{
+    .navbar__menu.active {
         transform: translateX(0);
     }
 
-    .burger-menu{
+    .burger-menu {
         display: block;
         width: 30px;
         height: 30px;
@@ -462,16 +586,16 @@ a {
         transition: all 0.4s ease-in-out;
     }
 
-    .burger-menu.pets{
+    .burger-menu.pets {
         background: url("../icons/burger-gray.svg") no-repeat center;
     }
 
-    .burger-menu.active{
+    .burger-menu.active {
         background: url("../icons/burger.svg") no-repeat center;
         transform: rotate(0deg);
     }
 
-    .navbar__menu .navbar__list{
+    .navbar__menu .navbar__list {
         list-style: none;
         padding: 128px 0 0;
         margin: 0;
@@ -481,7 +605,7 @@ a {
         justify-content: center;
     }
 
-    .navbar__menu .navbar__list .navbar__link{
+    .navbar__menu .navbar__list .navbar__link {
         margin-left: 0;
         margin-bottom: 40px;
         font-weight: 400;
@@ -490,7 +614,7 @@ a {
         color: #CDCDCD;
     }
 
-    .contacts{
+    .contacts {
         padding-top: 28px;
     }
 
@@ -500,7 +624,7 @@ a {
         flex-wrap: wrap;
     }
 
-    .contacts__item{
+    .contacts__item {
         width: 100%;
         margin-right: 0;
         margin-left: 0;
@@ -531,7 +655,7 @@ a {
         align-items: center;
     }
 
-    .contacts__img{
+    .contacts__img {
         width: 100%;
     }
 

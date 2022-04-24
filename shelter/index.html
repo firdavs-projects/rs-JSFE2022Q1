@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
           integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-<!--    <link rel="stylesheet" href="./assets/modules/chief-slider.min.css">-->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./assets/css/base.css">
 </head>
@@ -30,6 +29,7 @@
             </ul>
         </nav>
         <button class="burger-menu"></button>
+        <div class="navbar-background"></div>
         <div class="navbar__menu">
             <div class="navbar__logo">
                 <h2 class="navbar__title"><a href="./">Cozy House</a></h2>
@@ -89,38 +89,11 @@
     <div class="slider">
         <div class="slider__wrapper">
             <div class="slider__items">
-                <div class="slider__item">
-                    <div class="our-friends__item">
-                        <img src="./assets/images/kat.png" alt="Katrine">
-                        <div class="our-friends__item-title">
-                            Katrine
-                        </div>
-                        <button data-slide="Katrine" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                </div>
-                <div class="slider__item mobile-none">
-                    <div class="our-friends__item">
-                        <img src="./assets/images/jen.png" alt="Jennifer">
-                        <div class="our-friends__item-title">
-                            Jennifer
-                        </div>
-                        <button data-slide="Jennifer" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                </div>
-                <div class="slider__item mobile-none">
-                    <div class="our-friends__item">
-                        <img src="./assets/images/woo.png" alt="Woody">
-                        <div class="our-friends__item-title">
-                            Woody
-                        </div>
-                        <button data-slide="Woody" class="button outlined slide-btn">Learn more</button>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="buttons-container">
-            <button class="slider__control arrow left" data-slide="prev"></button>
-            <button class="slider__control arrow" data-slide="next"></button>
+            <button id="prev" class="slider__control arrow left" data-slide="prev"></button>
+            <button id="next" class="slider__control arrow right" data-slide="next"></button>
         </div>
     </div>
     <div class="our-friends__button">
@@ -130,24 +103,24 @@
     </div>
 </section>
 
-<!--<section id="modal" class="modal">-->
-<!--    <button class="modal__close"></button>-->
-<!--    <div class="modal__inner container">-->
-<!--        <img class="modal__img" id="modal__img" src="#" alt="">-->
-<!--        <div class="modal__text">-->
-<!--            <div class="modal__title">-->
-<!--                <h2 id="modal__title"></h2>-->
-<!--            </div>-->
-<!--            <div class="modal__type">-->
-<!--                <span id="modal__type"></span>-->
-<!--            </div>-->
-<!--            <div class="modal__info">-->
-<!--                <p id="modal__info"></p>-->
-<!--            </div>-->
-<!--            <div class="modal__attributes" id="modal__attributes"></div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+<section id="modal" class="modal">
+    <div class="modal__inner container">
+        <button class="modal__close"></button>
+        <img class="modal__img" id="modal__img" src="#" alt="">
+        <div class="modal__text">
+            <div class="modal__title">
+                <h2 id="modal__title"></h2>
+            </div>
+            <div class="modal__type">
+                <span id="modal__type"></span>
+            </div>
+            <div class="modal__info">
+                <p id="modal__info"></p>
+            </div>
+            <div class="modal__attributes" id="modal__attributes"></div>
+        </div>
+    </div>
+</section>
 
 <section id="help" class="help container">
     <div class="help__title">
@@ -271,8 +244,7 @@
     </div>
 </footer>
 
-<!--<script defer src="./assets/modules/chief-slider.min.js"></script>-->
-<script src="./script.js"></script>
 <script src="assets/js/base.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>

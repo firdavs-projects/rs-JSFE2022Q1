@@ -196,7 +196,10 @@
 .slider__items {
     counter-reset: slide;
     display: flex;
+    min-height: 437px;
+    max-height: 437px;
     justify-content: space-between;
+    transition: all .5s ease-in-out;
 }
 
 .buttons-container{
@@ -539,6 +542,7 @@
     .slider__item{
         flex: 0 0 100%;
         max-width: 100%;
+        width: 100%;
     }
 
     .mobile-none{
