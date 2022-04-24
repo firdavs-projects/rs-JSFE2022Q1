@@ -18,6 +18,10 @@ a {
     text-decoration: none;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -125,10 +129,10 @@ a {
     border: 2px solid #FDDCC4;
 }
 
-.modal__close:focus {
+.modal__close.hover {
     background: url(../icons/close.svg) no-repeat center center #FDDCC4;
-    border: 2px solid #FDDCC4 !important;
-    box-shadow: none !important;
+    border: 2px solid #FDDCC4;
+    box-shadow: none;
 }
 
 .modal__inner {
