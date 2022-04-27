@@ -23,7 +23,6 @@ const navbarBackground = document.querySelector('.navbar-background');
 const navbarMenu = document.querySelector('.navbar__menu')
 
 const toggleNavbar = () => {
-    console.log('toggleNavbar');
     navbarToggle.classList.toggle('active');
     navbarMenu.classList.toggle('active');
     navbarBackground.classList.toggle('active');
@@ -107,14 +106,7 @@ const getSlides = () => {
     fetch(isPetsPage ? '../assets/pets.json' : 'assets/pets.json')
         .then(response => response.json())
         .then(pets => {
-            slides = isPetsPage ? [
-                ...shuffle(pets),
-                ...shuffle(pets),
-                ...shuffle(pets),
-                ...shuffle(pets),
-                ...shuffle(pets),
-                ...shuffle(pets)
-            ] : [...pets, ...pets];
+            slides = pets;
         });
 }
 
@@ -155,17 +147,26 @@ const createSlide = (pet, index, pet2, pet3) => {
     return slide;
 }
 
+const addSlides = () => {
+    const count = window.innerWidth < 768 ? 3 : window.innerWidth < 1280 && window.innerWidth > 767 ? 6 : 8;
+    const pages = window.innerWidth < 768 ? 16 : window.innerWidth < 1280 && window.innerWidth > 767 ? 8 : 6;
+    const pets = [];
+    for (let i = 0; i < pages; i++) {
+        const limit = shuffle(slides).slice(0, count);
+        pets.push(...limit);
+    }
+    return pets;
+}
+
 const renderSlides = () => {
     currentSlide = 0;
     sliderItems.style.transform = 'translateX(0)';
     step = window.innerWidth < 1280 ? 3 : 2;
     count = window.innerWidth < 768 ? 1 : window.innerWidth < 1280 && window.innerWidth > 767 ? 2 : isPetsPage ? 4 : 3;
     const pets = isPetsPage
-        ? (slides.length / step) % count !== 0
-            ? slides.concat(slides.slice(0, count - Math.floor((slides.length / step)) % count))
-            : slides
+        ? addSlides()
         : slides.length % count !== 0
-            ? slides.concat(slides.slice(0, slides.length % count))
+            ? slides.concat(slides.slice(count, (count - (slides.length % count)) + count))
             : slides;
 
     sliderItems.innerHTML = '';
@@ -202,12 +203,12 @@ const nextSlide = (event) => {
     if (isPetsPage) {
         const {target} = event;
         const toLastPage = target.id === 'last-page';
-        if ((currentSlide + count) >= Math.ceil(slides.length / step) || toLastPage) {
+        if ((currentSlide + count) >= Math.ceil(addSlides().length / step) || toLastPage) {
             nextBtn.classList.add('disabled');
             prevBtn.classList.remove('disabled');
             lastPageBtn.classList.add('disabled');
             firstPageBtn.classList.remove('disabled');
-            currentSlide = Math.ceil((slides.length / step)) - count;
+            currentSlide = Math.ceil((addSlides().length / step)) - count;
         } else {
             nextBtn.classList.remove('disabled');
             prevBtn.classList.remove('disabled');
