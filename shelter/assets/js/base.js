@@ -114,7 +114,7 @@ const getSlides = () => {
                 ...shuffle(pets),
                 ...shuffle(pets),
                 ...shuffle(pets)
-            ] : shuffle(pets);
+            ] : pets;
         });
 }
 
